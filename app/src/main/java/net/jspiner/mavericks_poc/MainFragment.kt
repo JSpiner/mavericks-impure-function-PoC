@@ -27,6 +27,7 @@ class MainFragment : Fragment(R.layout.fragment_main), MavericksView {
 
     @SuppressLint("SetTextI18n")
     override fun invalidate() {
+        // it will blocking after state.count is `5`
         println("invalidated")
 
         withState(viewModel) { state ->
