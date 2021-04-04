@@ -33,7 +33,7 @@ protected fun setState(reducer: S.() -> S) {
 <br/>
 
 그래서 이렇게 외부 요인을 참조하는 순수하지 않은 함수로 reducer를 구성하면 오류가 발생합니다. <br/>
-참고 : branch
+참고 : [샘플 브랜치(https://github.com/JSpiner/mavericks-impure-function-PoC/tree/impure-reducer)](https://github.com/JSpiner/mavericks-impure-function-PoC/tree/impure-reducer)
 
 ```kotlin
     private val countMax = 5
@@ -44,4 +44,7 @@ protected fun setState(reducer: S.() -> S) {
             copy(count = min(count + 1, countMax))
         }
     }
+    
 ```
+
+> 
